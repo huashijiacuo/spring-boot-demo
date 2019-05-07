@@ -1,0 +1,22 @@
+2019-05-04 00:54:26.496  INFO 999948 --- [main] c.e.ding.demoweb.DemoWebApplication      : Starting DemoWebApplication on LAPTOP-60I4B97R with PID 999948 (C:\Users\shihsh\IdeaProjects\demo-web\target\classes started by shihsh in C:\Users\shihsh\IdeaProjects\demo-web)
+2019-05-04 00:54:26.501  INFO 999948 --- [main] c.e.ding.demoweb.DemoWebApplication      : No active profile set, falling back to default profiles: default
+2019-05-04 00:54:27.326  WARN 999948 --- [main] t.m.s.mapper.ClassPathMapperScanner      : Skipping MapperFactoryBean with name 'userDao' and 'com.example.ding.demoweb.dao.UserDao' mapperInterface. Bean already defined with the same name!
+2019-05-04 00:54:27.326  WARN 999948 --- [main] t.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.example.ding.demoweb]' package. Please check your configuration.
+2019-05-04 00:54:27.975  INFO 999948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-05-04 00:54:28.000  INFO 999948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-04 00:54:28.001  INFO 999948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-04 00:54:28.183  INFO 999948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-04 00:54:28.185  INFO 999948 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1609 ms
+2019-05-04 00:54:28.696  INFO 999948 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-04 00:54:28.920  INFO 999948 --- [main] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-04 00:54:28.921  INFO 999948 --- [main] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-04 00:54:28.921  INFO 999948 --- [main] t.m.m.autoconfigure.MapperCacheDisabler  : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-04 00:54:28.923  INFO 999948 --- [main] t.m.m.autoconfigure.MapperCacheDisabler  : Clear EntityHelper entityTableMap cache.
+2019-05-04 00:54:29.054  INFO 999948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-05-04 00:54:29.059  INFO 999948 --- [main] c.e.ding.demoweb.DemoWebApplication      : Started DemoWebApplication in 3.122 seconds (JVM running for 4.707)
+2019-05-04 00:54:41.473  INFO 999948 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-04 00:54:41.475  INFO 999948 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-05-04 00:54:41.483  INFO 999948 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-05-04 00:54:41.535  INFO 999948 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-05-04 00:54:47.037  INFO 999948 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-05-04 00:54:47.266  INFO 999948 --- [http-nio-8080-exec-2] c.e.d.d.services.impl.UserServiceImpl    : -------------------------get the user information by userName!--------------------------------
