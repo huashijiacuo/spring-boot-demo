@@ -20,12 +20,12 @@ import java.util.Date;
  **/
 
 @Component
-public class KafkaSender {
+public class KafkaSender1 {
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
+    private KafkaTemplate<String, Object> kafkaTemplate;
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private Gson gson = new GsonBuilder().create();
 

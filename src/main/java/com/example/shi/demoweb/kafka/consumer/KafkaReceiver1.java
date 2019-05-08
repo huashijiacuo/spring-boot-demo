@@ -23,7 +23,7 @@ import java.util.Optional;
  **/
 
 @Component
-public class KafkaReceiver {
+public class KafkaReceiver1 {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -34,8 +34,8 @@ public class KafkaReceiver {
 
         if (kafkaMessage.isPresent()) {
             Object message = kafkaMessage.get();
-            logger.info("Receiver:----------------- record =" + record);
-            logger.info("Receiver:------------------ message =" + message);
+            logger.info("Receiver2:----------------- record =" + record);
+            logger.info("Receiver2:------------------ message =" + message);
         }
 
     }
