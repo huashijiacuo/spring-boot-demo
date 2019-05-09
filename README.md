@@ -1,16 +1,5 @@
 ## spring-boot 用例
 
-### 整合kafka
-使用了spring-kafka框架，简单的发送和接收见package kafka，接收消息只需要引入
-    
-    @KafkaListener(topics = {"test"})
-    public void listen(ConsumerRecord<?, ?> record, @Header(KafkaHeaders.RECEIVED_TOPIC) String topic) { ... }
-注解，并指定topics，用例中的topic于sender中的topic一致
-
-### 测试遇到的问题  
-Q: bean使用@Autowired无法注入  
-A: 在测试类上引入注解：
-
-    @RunWith(SpringRunner.class)    
-    @SpringBootTest
-    public class KafkaSender2Test { ... }
+### 整合tk.mybatis
+測試用例：TkUserMapper，需要繼承Mapper<T>,類上不加注解@org.apache.ibatis.annotations.Mapper,會出現找不到該bean的情況，可能與mybatis-srping包的衝突？  
+使用tk.mybatis包之後，可以直接使用Example相關的方法進行數據庫查詢操作，簡單的查詢語句不需要在xml裏寫SQL語句了。
