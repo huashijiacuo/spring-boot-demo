@@ -3,8 +3,11 @@ package com.example.shi.demoweb.controller;
 import com.example.shi.demoweb.entity.User;
 import com.example.shi.demoweb.services.IUserService;
 import com.example.shi.demoweb.vo.user.UserVO;
+import com.example.shi.demoweb.vo.user.query.UserQueryVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @title: UserController </br>
@@ -30,7 +33,7 @@ public class UserController {
     */
     @PostMapping("/userInfo")
     public User getUserByParam(@RequestParam(value = "userName") String userName) {
-        return userService.getUser(userName);
+        return userService.getUserByName(userName);
     }
 
     /**
@@ -42,8 +45,13 @@ public class UserController {
     * @date: 2019/5/5
     */
     @PostMapping("/userInfoByJson")
-    public User getUserByJson(@RequestBody UserVO userVO) {
-        return userService.getUser(userVO.getName());
+    public List<User> getUserByJson(@RequestBody UserQueryVO userQueryVO) {
+        return userService.getUser(userQueryVO);
+    }
+
+    @PostMapping("/userInfoByJsonSelect")
+    public List<User> getUserBySelect(@RequestBody UserQueryVO userQueryVO) {
+        return userService.selectUser(userQueryVO);
     }
 
     @PostMapping("/userUpdate")
