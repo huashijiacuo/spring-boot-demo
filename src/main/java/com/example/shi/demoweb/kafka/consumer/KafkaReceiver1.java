@@ -1,17 +1,13 @@
 package com.example.shi.demoweb.kafka.consumer;
 
-import com.example.shi.demoweb.kafka.bean.Message;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
 import java.util.Optional;
 
 /**
@@ -27,6 +23,9 @@ public class KafkaReceiver1 {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
+//    @Autowired
+//    KafkaConsumer<String, Object> consumer;
+
     @KafkaListener(topics = {"test"})
     public void listen(ConsumerRecord<?, ?> record) {
 
@@ -39,4 +38,6 @@ public class KafkaReceiver1 {
         }
 
     }
+
+
 }

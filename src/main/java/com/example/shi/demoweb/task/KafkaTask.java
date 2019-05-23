@@ -2,6 +2,7 @@ package com.example.shi.demoweb.task;
 
 import com.example.shi.demoweb.entity.User;
 import com.example.shi.demoweb.kafka.consumer.KafkaReceiver1;
+import com.example.shi.demoweb.kafka.consumer.KafkaReceiverByConsumer;
 import com.example.shi.demoweb.kafka.provider.KafkaSender1;
 import com.example.shi.demoweb.kafka.provider.KafkaSender2;
 import org.slf4j.Logger;
@@ -42,6 +43,7 @@ public class KafkaTask implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println(">>>>>>>>>>>>>>>服务启动执行，执行加载数据等操作<<<<<<<<<<<<<");
+        new KafkaReceiverByConsumer().start();
 //        new Thread() {
 //            @Override
 //            public void run() {
@@ -63,7 +65,7 @@ public class KafkaTask implements CommandLineRunner {
 //                }
 //             }
 //        }.start();
-//
+
 //        new Thread() {
 //            @Override
 //            public void run() {

@@ -59,11 +59,11 @@
         </dependency>
 
 
-        <!--<dependency>-->
-            <!--<groupId>tk.mybatis</groupId>-->
-            <!--<artifactId>mapper-spring-boot-starter</artifactId>-->
-            <!--<version>RELEASE</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>RELEASE</version>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
         <dependency>
