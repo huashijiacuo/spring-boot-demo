@@ -12,7 +12,7 @@ import java.sql.DriverManager;
  * @title: HelloWorldController </br>
  * @createDate: 2019/5/3 22:19 </br>
  * @author: shihsh  </br>
- * @description: TODO </br>
+ * @description: 测试用，硬编码mysql配置 </br>
  * @version: V1.0
  **/
 
@@ -57,7 +57,7 @@ public class HelloWorldController {
             Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("成功加载MySQL驱动程序");
             // 一个Connection代表一个数据库连接
-            conn = DriverManager.getConnection("jdbc:mysql://98.142.131.50:3306/web-test?useSSL=false&serverTimezone=GMT", "root", "shun1qaz@WSX");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/web-test?useSSL=false&serverTimezone=GMT", "root", "shun1qaz@WSX");
             System.out.println("创建数据表成功");
             result = "success!";
         } catch (Exception e) {

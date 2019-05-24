@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
  * @title: UserMapper.xml </br>
  * @createDate: 2019/5/5 17:03 </br>
  * @author: shihsh  </br>
- * @description: TODO </br>
+ * @description: User mapper类 </br>
  * @version: V1.0
  **/
 

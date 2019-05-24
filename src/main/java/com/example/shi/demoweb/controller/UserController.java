@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
  * @title: UserController </br>
  * @createDate: 2019/5/4 0:27 </br>
  * @author: shihsh  </br>
- * @description: TODO </br>
+ * @description: 用户Controller </br>
  * @version: V1.0
  **/
 
@@ -24,7 +24,7 @@ public class UserController {
     *
     * @description: 传递参数方式1：把参数放在params中
     * @param: userName
-    * @return: com.example.ding.demoweb.entity.User
+    * @return: com.example.shi.demoweb.entity.User
     * @author: shihsh
     * @date: 2019/5/5
     */
@@ -37,7 +37,7 @@ public class UserController {
     *
     * @description: 传递参数方式2：将json参数放在请求Body中,后端通过RequestBody注解，将参数绑定到对应的VO
     * @param: userVO
-    * @return: com.example.ding.demoweb.entity.User
+    * @return: com.example.shi.demoweb.entity.User
     * @author: shihsh
     * @date: 2019/5/5
     */
@@ -49,5 +49,11 @@ public class UserController {
     @PostMapping("/userUpdate")
     public void updateUser(User user) {
         userService.updateUser(user);
+    }
+
+    @PostMapping("/userData")
+    public boolean addUser(@RequestBody UserVO userVO) {
+        userService.addUserToRedis(userVO);
+        return true;
     }
 }

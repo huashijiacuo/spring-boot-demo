@@ -6,7 +6,7 @@ import java.util.Date;
  * @title: User </br>
  * @createDate: 2019/5/4 0:23 </br>
  * @author: shihsh  </br>
- * @description: TODO </br>
+ * @description: User 实体 </br>
  * @version: V1.0
  **/
 
